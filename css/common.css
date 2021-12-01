@@ -1,0 +1,548 @@
+/*common*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?sa0f08');
+    src: url('../fonts/icomoon.eot?sa0f08#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?sa0f08') format('truetype'), url('../fonts/icomoon.woff?sa0f08') format('woff'), url('../fonts/icomoon.svg?sa0f08#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/*container*/
+
+.w980 {
+    width: 980px;
+    /* max-width: 980px; */
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.w1200 {
+    width: 1200px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}
+
+.w1248 {
+    width: 1248px;
+    /* max-width: 1248px; */
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+/* promotion */
+
+.promotion {
+    height: 63px;
+    background-color: #83CAE8;
+}
+
+.promotion a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.promotion-text {
+    margin-left: 80px;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+/* header */
+
+.header {
+    height: 95px;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    margin: 38px 0;
+    width: 128px;
+    height: 16px;
+    background: url(../image/logo.svg) no-repeat;
+}
+
+.logo a {
+    display: block;
+    width: 128px;
+    height: 16px;
+    text-indent: -999px;
+    font-size: 0;
+}
+
+.search {
+    position: relative;
+    float: left;
+    margin: 29px;
+}
+
+.search input {
+    width: 496px;
+    height: 36px;
+    padding-left: 32px;
+    background-color: #f6f6f8;
+    border: 1px solid transparent;
+    border-radius: 18px;
+}
+
+
+/* 伪元素不能加在input上 加在父元素search */
+
+.search::after {
+    content: '\f002';
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    font-family: 'icomoon';
+}
+
+.search input:focus {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.quick-menu {
+    float: left;
+    width: 440px;
+    height: 32px;
+    margin-top: 32px;
+}
+
+.quick-menu>div {
+    float: left;
+    height: 32px;
+    margin-right: 20px;
+}
+
+.quick-menu-separator {
+    width: 1px;
+    background: #ccc;
+}
+
+
+/* a是浮动的父元素 定义高和宽 */
+
+.stores-services a {
+    display: block;
+    width: 150px;
+    height: 32px;
+}
+
+.community a {
+    display: block;
+    width: 110px;
+    height: 32px;
+}
+
+.signin a {
+    display: block;
+    width: 88px;
+    height: 32px;
+}
+
+
+/* a下面浮动的子元素 图标和文字盒子 */
+
+.quick-menu a i {
+    float: left;
+    height: 32px;
+    margin-right: 7px;
+    line-height: 32px;
+    font-family: 'icomoon';
+    font-size: 30px;
+}
+
+.quick-menu a div {
+    float: left;
+    margin-top: 7px;
+}
+
+.quick-menu a h4 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.quick-menu a p {
+    font-size: 12px;
+}
+
+
+/* overwrite .quick-menu a div {} */
+
+.quick-menu .stores-services div {
+    line-height: 16px;
+    margin-top: 0;
+}
+
+.quick-menu>div:hover i {
+    color: red;
+}
+
+.quick-menu a div:hover {
+    border-bottom: 2px solid #000;
+}
+
+.shop-menu {
+    float: right;
+    width: 70px;
+    height: 25px;
+    margin-top: 35px;
+}
+
+.shop-menu a {
+    float: left;
+    width: 25px;
+    height: 25px;
+}
+
+.basket a {
+    float: right;
+}
+
+.shop-menu a:before {
+    content: '';
+    font-family: 'icomoon';
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.like a:before {
+    content: '\f08a';
+}
+
+.basket a:before {
+    content: '\f290';
+}
+
+.like a:hover:before {
+    content: '\f004';
+}
+
+.basket a:hover:before {
+    color: red;
+}
+
+
+/* nav */
+
+.nav {
+    min-width: 1280px;
+    background: #000;
+}
+
+.nav-items {
+    height: 44px;
+    /* overflow: hidden; */
+}
+
+.nav-items ul {
+    width: 110%;
+    height: 44px;
+}
+
+.nav-items ul li {
+    float: left;
+    margin-right: 45px;
+}
+
+.nav-items li a {
+    color: #fff;
+    line-height: 44px;
+}
+
+.nav-contents {
+    background-color: pink;
+}
+
+.nav-contents li a {
+    display: block;
+}
+
+
+/* message */
+
+.message {
+    min-width: 1280px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #e4e4e8;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* footer */
+
+footer {
+    min-width: 1280px;
+    margin-top: 48px;
+    padding: 48px 0 96px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer .fseparator {
+    height: 1px;
+    width: 100%;
+    margin: 32px 0;
+    background-color: #757575;
+}
+
+
+/* footer service area */
+
+footer .fservices {
+    height: 35px;
+    line-height: 16px;
+}
+
+footer .fservices div {
+    float: left;
+}
+
+.fservices a,
+.fservices .tel,
+.fservices .get-app {
+    display: block;
+    width: 215px;
+}
+
+.fservices a div,
+.fservices .tel,
+.fservices .get-app {
+    float: left;
+}
+
+.fservices a:before,
+.fservices .tel:before,
+.fservices .get-app:before {
+    content: '';
+    float: left;
+    margin-right: 10px;
+    font-family: 'icomoon';
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.fservices a:hover h4 {
+    text-decoration: underline;
+}
+
+.fservices .find-store a:before {
+    content: '\f278';
+}
+
+.fservices .customer-service a:before {
+    content: '\f27b';
+}
+
+.fservices .tel:before {
+    content: '\f095';
+}
+
+.fservices .get-app:before {
+    content: '\f10a';
+}
+
+
+/* footer help area */
+
+.fhelp {
+    position: relative;
+    overflow: hidden;
+}
+
+.fhelp dl {
+    float: left;
+    width: 217px;
+}
+
+.fhelp dd a:hover {
+    text-decoration: underline;
+}
+
+.fhelp dt,
+.fhelp dd {
+    margin-bottom: 14px;
+}
+
+.fhelp dt {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.fhelp dd {
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.fhelp dd img {
+    width: 24px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.fhelp dd a.current {
+    position: relative;
+    cursor: default;
+}
+
+.fhelp dd a.current:hover {
+    text-decoration: none;
+}
+
+.fhelp dd a.current:before {
+    /* we need to use hexadecimal equivalent of the Html entity */
+    content: '\2713';
+    position: absolute;
+    left: -20px;
+}
+
+.fhelp p {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 310px;
+    font-family: georgia, times, serif;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.fhelp .email-signup {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fhelp .email-signup span {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.fhelp .email-signup input {
+    width: 255px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+}
+
+.fhelp .email-signup button {
+    width: 90px;
+    height: 45px;
+    font-weight: 700;
+    border-radius: 22.5px;
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+    transition: border .3s, color .3s;
+}
+
+.fhelp .email-signup button:hover {
+    border: 2px solid #aaa;
+    color: #aaa;
+}
+
+
+/* footer copyright area */
+
+.copyright-links a {
+    margin-right: 15px;
+}
+
+.copyright-links a:hover {
+    text-decoration: underline;
+}
+
+.medialinks a {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+}
+
+.medialinks .instagram:after {
+    content: '\f16d';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .facebook:after {
+    content: '\f082';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .twitter:after {
+    content: '\f081';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .youtube:after {
+    content: '\f16a';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .pinterest:after {
+    content: '\f0d3';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .snapchat:after {
+    content: '\f2ad';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.medialinks .tiktok:after {
+    content: '\f08a';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'icomoon';
+    font-size: 25px;
+}
